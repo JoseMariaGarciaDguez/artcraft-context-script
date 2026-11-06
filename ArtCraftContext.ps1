@@ -113,7 +113,13 @@ try {
                     try {
                         [byte[]]$data = Make-Template $name $recipe $exe $temp.FullName
                         $label = "$name $($recipe[0])"
-                    } catch { Write-Warning "$_ Using the Open entry." }
+                    } catch {
+                        if ($handler) {
+                            Write-Warning "$_ Keeping the last installed template."
+                            continue
+                        }
+                        Write-Warning "$_ Using the Open entry."
+                    }
                 } elseif ($handler.GetValue('FileName') -like '*\ArtCraft\ShellNew\*') {
                     Write-Host "Keeping the existing ArtCraft menu entry for $name."
                     continue

@@ -43,4 +43,3 @@ if ($extension -and !$extension.ValueCount -and !$extension.SubKeyCount) { Remov
 foreach ($key in $keys) {
     if (Test-Path "HKCU:\Software\Classes\$key") { throw "Uninstall left $key" }
 }
-
