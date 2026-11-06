@@ -1,0 +1,21 @@
+{
+  "WordCraft":     ["Document", ".docx", "run", "--save"],
+  "GridCraft":     ["Workbook", ".xlsx", "run", "--out"],
+  "DeckCraft":     ["Presentation", ".deckcraft", "run", "--save"],
+  "DesignCraft":   ["Publication", ".designcraft", "run", "--export"],
+  "VectorCraft":   ["Drawing", ".svg", "run", "--export"],
+  "CADCraft":      ["Drawing", ".dxf", "run", "--metric", "--save"],
+  "MaterialCraft": ["Material", ".sbs", "new", "empty"],
+  "TextureCraft":  ["Texture Project", ".tcraft", "new", "builtin:cube"],
+  "SoundCraft":    ["Session", ".scraft", "run", "--save"],
+  "FigCraft":      ["Design", ".figcraft", "run", "{steps}", "--out"],
+  "FilmCraft":     ["Project", ".fcproj", "--save-as", "{output}", "info"],
+  "EffectCraft":   ["Project", ".ecproj", "--empty", "--save-as", "{output}", "info"],
+  "PhotoCraft":    ["Canvas", ".png", "@png"],
+  "PdfCraft":      ["Document", ".pdf", "@pdf"],
+  "LightCraft":    [],
+  "Craft Anything": [],
+  "SolidCraft":    [],
+  "ArtCraft Launcher": [],
+  "ArtCraft Studio": []
+}

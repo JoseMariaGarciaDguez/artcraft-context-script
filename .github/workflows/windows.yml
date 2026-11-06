@@ -1,0 +1,15 @@
+name: Windows smoke test
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check catalog and available template generators
+        shell: powershell
+        run: ./tests/Smoke.ps1
+      - name: Exercise install, repeat install and uninstall in the user registry
+        shell: powershell
+        run: ./tests/Registry.ps1
